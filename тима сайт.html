@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название Ресторана - Темірлан Алматы Атырау 06</title>
+    <style>
+        /* --- БАЗОВЫЙ CSS ДЛЯ СТИЛИЗАЦИИ --- */
+        :root {
+            --primary-color: #A52A2A; /* Тёмно-красный/бордовый */
+            --secondary-color: #F5F5DC; /* Бежевый */
+            --text-color: #333;
+            --light-bg: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-bg);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--light-bg);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1200x500/A52A2A/FFFFFF?text=ФОТО+РЕСТОРАНА') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero p {
+            font-size: 1.5em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        /* Стиль для Меню */
+        .menu-category {
+            margin-bottom: 60px;
+        }
+
+        .menu-category h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-weight: bold;
+        }
+
+        .item-price {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Стиль для Контактов */
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-info div {
+            flex-basis: 30%;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: var(--secondary-color);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #8B0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: var(--text-color);
+            color: var(--light-bg);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Вкусные Традиции</div>
+            <ul>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#reservation">Бронь</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <h1>Вкусные Традиции</h1>
+            <p>Место, где встречаются классика и современность.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Наше Меню</h2>
+
+            <div class="menu-category">
+                <h3>Закуски</h3>
+                <div class="menu-item">
+                    <span class="item-name">Салат "Цезарь" с курицей</span>
+                    <span class="item-price">111руб.</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Ассорти сыров</span>
+                    <span class="item-price">9000 ТГ .</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Брускетта с томатами</span>
+                    <span class="item-price">7122.</span>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Основные блюда</h3>
+                <div class="menu-item">
+                    <span class="item-name">Стейк Рибай (300 гр)</span>
+                    <span class="item-price">1890 руб.</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Паста Карбонара</span>
+                    <span class="item-price">." 7122.</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Филе лосося с овощами</span>
+                    <span class="item-price"> Тегін .</span>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Десерты</h3>
+                <div class="menu-item">
+                    <span class="item-name">Чизкейк Нью-Йорк</span>
+                    <span class="item-price">579 ТГ .</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">Шоколадный Фондан</span>
+                    <span class="item-price">570ТГ.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" style="background-color: var(--secondary-color);">
+            <h2>О Ресторане</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                "Вкусные Традиции" открыл свои двери в 2010 году и с тех пор
+                стал любимым местом для ценителей европейской кухни. Мы верим,
+                что еда – это искусство, а каждый гость заслуживает особого внимания.
+                Наши повара используют только свежайшие сезонные продукты.
+                Приглашаем вас насладиться атмосферой уюта и незабываемого вкуса!
+            </p>
+        </section>
+
+        <section id="contacts">
+            <h2>Контакты и Бронирование</h2>
+
+            <div class="contact-info">
+                <div>
+                    <h3>Адрес</h3>
+                    <p>ул. МАСАНЧИ 88/99 </p>
+                </div>
+                <div>
+                    <h3>Телефон</h3>
+                    <p>+7 775 518 9897</p>
+                </div>
+                <div>
+                    <h3>Часы работы</h3>
+                    <p>Пн-Вс: 12:00 - 23:00</p>
+                </div>
+            </div>
+
+            <h3 id="reservation" style="text-align: center; color: var(--primary-color); margin-top: 40px;">Забронировать столик</h3>
+            <form class="contact-form">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="date">Дата и время:</label>
+                <input type="datetime-local" id="date" name="date" required>
+
+                <label for="guests">Количество гостей:</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+
+                <label for="message">Пожелания (необязательно):</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Забронировать</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ресторан "restoBAR TEMIRLAN". Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
